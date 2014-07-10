@@ -25,6 +25,12 @@ Site visitors will also be able to change camera mode:
 * Stationary
 * Pan and cut at random positions/angles
 
+Planned Widget Display & Controls (taken from SketchFab):
+![alt tag](http://i.imgur.com/8c7yoaz.png)
+![alt tag](http://i.imgur.com/KQCHgKJ.png)
+![alt tag](http://i.imgur.com/xLSJ5w7.png)
+![alt tag](http://i.imgur.com/eh0W2iO.png)
+
 Site visitors will not be able to change the model, background, or settings. This way, site owners can display their original work as intended.
 
 ### Back-end
