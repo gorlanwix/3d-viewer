@@ -1,0 +1,96 @@
+<div class="loading" ng-cloak="">
+	<h3 style="text-align: center">Loading Settings</h3>
+</div>
+
+<div ng-controller="SettingsCtrl">
+	<header class="box description-box">
+		<img class="logo" width="86" src="images/wix_icon.png">
+		<div class="notloggedin-container" ng-hide="provider">
+			<p class="description">Upload your 3D model. It can be in any of the supported formats: (.cad, .swf, .svg)
+			</p>
+            <button>Upload File</button>
+	    </div>
+	</header>
+	<div wix-ctrl="Accordion">
+	    <div class="acc-pane">
+	        <h3>Model, Lighting, Shading, Camera</h3>
+	        <div class="acc-content">
+	        	<ul class="list">
+	        		<li wix-label="Title (Optional)">
+			        	<div wix-model="title" wix-ctrl="Input" wix-options="{placeholder: 'Mona Lisa Sculpture'}"></div>
+			        </li>
+		        	<li wix-label="Model Color">
+		        		<div wix-param="modelColor" wix-ctrl="ColorPicker" wix-options="{startWithColor: 'color-17'}"></div>
+		        	</li>
+		        	<li wix-label="Shading Strength">
+		        		<span class="uilib-text">Light</span>
+		        		<div  wix-model="shadingStrength" wix-ctrl="Slider" wix-options="{ maxValue:100 }"></div>
+		        		<span class="uilib-text slider-post-label">Dark</span>
+		        	</li>
+		        	<li wix-label="Shadow Length">
+		        		<span class="uilib-text">Short</span>
+		        		<div  wix-model="shadowLength" wix-ctrl="Slider" wix-options="{ maxValue:10 }"></div>
+		        		<span class="uilib-text slider-post-label">Long</span>
+		        	</li>
+					<li wix-label="Lighting Strength">
+						<span class="uilib-text">Dim</span>
+		        		<div  wix-model="lightingStrength" wix-ctrl="Slider" wix-options="{ maxValue:100 }"></div>
+		        		<span class="uilib-text slider-post-label">Bright</span>
+		        	</li>
+		        	<li wix-label="Lighting Type">
+		        		<div wix-model="lightingType" wix-ctrl="ButtonGroup">
+						    <button value="0">Omni</button>
+						    <button value="5">Directional</button>
+						    <button value="10">Spot Light</button>
+						    <button value="20">Area</button>
+						    <button value="30">Volume</button>
+						    <button value="40">Ambient</button>
+						</div>
+		        	</li>
+		        	<li wix-label="Lighting Direction (Optional)">
+		        		<div wix-model="lightingDirection" wix-ctrl="ToggleButtonGroup">
+						    <button value="0">Top</button>
+						    <button value="5">Bottom</button>
+						    <button value="10">Left</button>
+						    <button value="20">Right</button>
+						</div>
+		        	</li>
+		        	<li wix-label="Camera">
+		        		<div wix-model="camera" wix-ctrl="ButtonGroup">
+						    <button value="0">Stationary</button>
+						    <button value="5">Rotating</button>
+						    <button value="10">Pan</button>
+						    <button value="20">Cut</button>
+						    <button value="30">Slow Zoom</button>
+						</div>
+		        	</li>
+			        
+		        </ul>
+	        </div>
+	    </div>
+
+	    <div class="acc-pane">
+	        <h3>Background</h3>
+	        <div class="acc-content">
+	        	<ul class="list">
+	        		<li wix-label="Background &amp; Opacity">
+		        		<div wix-param="backgroundColor" wix-ctrl="ColorPickerWithOpacity" wix-options="{startWithColor: 'color-3', startWithOpacity:90}"></div>
+		        	</li>
+					<li wix-label="Background Image">
+						<div class="bg-image" wix-model="size" wix-ctrl="ButtonGroup">
+						    <button value="mini">
+						    	<img class="bg-image" src="http://beta.rspms.com/icons/Pack%205%20-%20Web%20Illustrations/Background%20Bases/3D%20Glossy/Glossy%203D%20Blue%20Square.png">
+						    </button>
+						    <button value="medium">
+						    	<img class="bg-image" src="http://psdhunter.com/psds/1094-thumb-abstract-background-set.png">
+						    </button>
+						    <button value="large">
+						    	<img class="bg-image" src="http://psdhunter.com/psds/1382-thumb-beautiful-blue-rays-background.png">
+						    </button>
+						</div>
+					</li>
+	        	</ul>
+	        </div>
+	    </div>
+	</div>
+</div>

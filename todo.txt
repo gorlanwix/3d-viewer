@@ -1,0 +1,12 @@
+1. allow settings panel to control:
+	1) background color - color panel
+	2) model color - color/opacity panel
+	3) shading - slider. light to strong shadow. short to long length
+	4) lighting - slider. dark to bright
+	5) background - click and choose layout with pictures (similar to vCita Contact Form app)
+	6) default camera (stationary, rotating, etc)
+2. connect to amazon S3 for storage of 3D models
+3. use webGL to display a canvas for rendering
+4. configure Mongo to establish user and model list relation
+5. use Mongoose (ORM for MongoDB for easier database management)
+6. check out the yeoman generator for threejs experiments
