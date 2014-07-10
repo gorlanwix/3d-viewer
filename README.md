@@ -1,5 +1,7 @@
 ## 3D Viewer
 
+### Front-end
+
 The 3D Viewer Wix app allows site creators to upload their 3D models to an environment configurable through the settings panel. Site visitors will be able to see the model on a canvas that the site owner can customize.
 
 Site owners can control:
@@ -20,3 +22,7 @@ Site visitors will also be able to change camera mode:
 * Pan and cut at random positions/angles
 
 Site visitors will not be able to change the model, background, or settings. This way, site owners can display their original work as intended.
+
+### Back-end
+
+The back end is written in Node.js and the database uses MongoDB/Mongoose. The models themselves are saved on Amazon S3 web services.
