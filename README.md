@@ -13,7 +13,10 @@ Site owners can control:
 
 Settings Panel Screenshots:
 ![alt tag](http://i.imgur.com/FNbHX8x.png)
-![alt tag](http://imgur.com/w7zSTTM,h2rY5PQ,yJhHSkd,iMSrvhb,FNbHX8x#3)
+![alt tag](http://i.imgur.com/iMSrvhb.png)
+![alt tag](http://i.imgur.com/yJhHSkd.png)
+![alt tag](http://i.imgur.com/h2rY5PQ.png)
+![alt tag](http://i.imgur.com/w7zSTTM.png)
 
 The site visitors will be able to control the camera using their mouse:
 * Left click and hold to orbit/rotate camera
@@ -26,10 +29,10 @@ Site visitors will also be able to change camera mode:
 * Pan and cut at random positions/angles
 
 Target Widget Display & Controls (taken from SketchFab):
-![alt tag](http://i.imgur.com/8c7yoaz.png)
-![alt tag](http://i.imgur.com/KQCHgKJ.png)
-![alt tag](http://i.imgur.com/xLSJ5w7.png)
-![alt tag](http://i.imgur.com/eh0W2iO.png)
+![alt tag](http://i.imgur.com/yI9MCKV.png)
+![alt tag](http://i.imgur.com/loQI95O.png)
+![alt tag](http://i.imgur.com/sG0VWRU.png)
+![alt tag](http://i.imgur.com/cwtId1z.png)
 
 Site visitors will not be able to change the model, background, or settings. This way, site owners can display their original work as intended.
 
