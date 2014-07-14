@@ -6,21 +6,34 @@
 	<header class="box description-box">
 		<img class="logo" width="86" src="images/wix_icon.png">
 		<div class="notloggedin-container" ng-hide="provider">
-			<p class="description">Upload your 3D model. It can be in any of the supported formats: (.cad, .swf, .svg)
-			</p>
-            <button>Upload File</button>
+			<p class="description">The 3D Viewer Application allows you to upload and display your 3D models and configure display options. Visitors of your site will be able to see your work at any camera angle they like.</p>
 	    </div>
 	</header>
 	<div wix-ctrl="Accordion">
 	    <div class="acc-pane">
-	        <h3>Model, Lighting, Shading, Camera</h3>
+	        <h3>Model Settings</h3>
 	        <div class="acc-content">
 	        	<ul class="list">
+	        		<li wix-label="Model File">
+	        			<div ng-hide="modelUploaded">
+				        	<span class="uilib-text">Supported formats: (.cad, .swf, .svg)</span> 
+				        	<button>Upload File</button>
+				        </div>
+			        	<div ng-show="modelUploaded">
+			        		<img class="sample-model" src="images/Headphones_001.jpg"/>
+			        		<button>Remove</button>
+			        	</div>
+			        </li>
 	        		<li wix-label="Title (Optional)">
 			        	<div wix-model="title" wix-ctrl="Input" wix-options="{placeholder: 'Mona Lisa Sculpture'}"></div>
 			        </li>
 		        	<li wix-label="Model Color">
-		        		<div wix-param="modelColor" wix-ctrl="ColorPicker" wix-options="{startWithColor: 'color-17'}"></div>
+		        		<button ng-click="modelColors = !modelColors">
+		        			Customizable colors 
+	        				<span ng-if="!modelColors">off</span>
+	        				<span ng-if="modelColors">on</span>
+		        		</button>
+		        		<div ng-show="modelColors" wix-param="modelColor" wix-ctrl="ColorPicker" wix-options="{startWithColor: 'color-17'}"></div>
 		        	</li>
 		        	<li wix-label="Shading Strength">
 		        		<span class="uilib-text">Light</span>
@@ -32,6 +45,16 @@
 		        		<div  wix-model="shadowLength" wix-ctrl="Slider" wix-options="{ maxValue:10 }"></div>
 		        		<span class="uilib-text slider-post-label">Long</span>
 		        	</li>
+					
+			        
+		        </ul>
+	        </div>
+	    </div>
+
+	    <div class="acc-pane">
+	        <h3>Environment Settings</h3>
+	        <div class="acc-content">
+	        	<ul class="list">
 					<li wix-label="Lighting Strength">
 						<span class="uilib-text">Dim</span>
 		        		<div  wix-model="lightingStrength" wix-ctrl="Slider" wix-options="{ maxValue:100 }"></div>
@@ -39,15 +62,16 @@
 		        	</li>
 		        	<li wix-label="Lighting Type">
 		        		<div wix-model="lightingType" wix-ctrl="ButtonGroup">
-						    <button value="0">Omni</button>
-						    <button value="5">Directional</button>
-						    <button value="10">Spot Light</button>
-						    <button value="20">Area</button>
-						    <button value="30">Volume</button>
-						    <button value="40">Ambient</button>
+						    <button value="0" ng-click="disableLightingOptions()">None</button>
+						    <button value="5" ng-click="enableLightingOptions()">Directional</button>
+						    <button value="10" ng-click="enableLightingOptions()">Spot Light</button>
+						    <button value="20" ng-click="disableLightingOptions()">Area</button>
+						    <button value="30" ng-click="disableLightingOptions()">Volume</button>
+						    <button value="40" ng-click="disableLightingOptions()">Ambient</button>
+						    <button value="50" ng-click="disableLightingOptions()">Omni</button>
 						</div>
 		        	</li>
-		        	<li wix-label="Lighting Direction (Optional)">
+		        	<li ng-show="lightingOptions" wix-label="Lighting Direction (Optional)">
 		        		<div wix-model="lightingDirection" wix-ctrl="ToggleButtonGroup">
 						    <button value="0">Top</button>
 						    <button value="5">Bottom</button>
@@ -55,7 +79,7 @@
 						    <button value="20">Right</button>
 						</div>
 		        	</li>
-		        	<li wix-label="Camera">
+		        	<li wix-label="Default Camera">
 		        		<div wix-model="camera" wix-ctrl="ButtonGroup">
 						    <button value="0">Stationary</button>
 						    <button value="5">Rotating</button>
@@ -64,28 +88,40 @@
 						    <button value="30">Slow Zoom</button>
 						</div>
 		        	</li>
-			        
-		        </ul>
-	        </div>
-	    </div>
-
-	    <div class="acc-pane">
-	        <h3>Background</h3>
-	        <div class="acc-content">
-	        	<ul class="list">
-	        		<li wix-label="Background &amp; Opacity">
+		        	<li wix-label="Background &amp; Opacity">
 		        		<div wix-param="backgroundColor" wix-ctrl="ColorPickerWithOpacity" wix-options="{startWithColor: 'color-3', startWithOpacity:90}"></div>
 		        	</li>
-					<li wix-label="Background Image">
-						<div class="bg-image" wix-model="size" wix-ctrl="ButtonGroup">
+					<li style="margin-bottom: 15px;" wix-label="Background Landscape">
+						<div class="bg-image-container" wix-model="size" wix-ctrl="ButtonGroup">
 						    <button value="mini">
-						    	<img class="bg-image" src="http://beta.rspms.com/icons/Pack%205%20-%20Web%20Illustrations/Background%20Bases/3D%20Glossy/Glossy%203D%20Blue%20Square.png">
+						    	<img class="bg-image" src="images/bg1.png">
 						    </button>
 						    <button value="medium">
-						    	<img class="bg-image" src="http://psdhunter.com/psds/1094-thumb-abstract-background-set.png">
+						    	<!-- <img class="bg-image" src="http://psdhunter.com/psds/1094-thumb-abstract-background-set.png"> -->
+						    	<img class="bg-image" src="images/bg2.png">
 						    </button>
 						    <button value="large">
-						    	<img class="bg-image" src="http://psdhunter.com/psds/1382-thumb-beautiful-blue-rays-background.png">
+						    	<!-- <img class="bg-image" src="http://psdhunter.com/psds/1382-thumb-beautiful-blue-rays-background.png"> -->
+						    	<img class="bg-image" src="images/bg3.png">
+						    </button>
+						    <button value="xlarge">
+						    	<img class="bg-image" src="images/bg4.png">
+						    </button>
+						</div>
+					</li>
+					<li wix-label="Background Format">
+						<div wix-model="bg-form" wix-ctrl="ButtonGroup">
+						    <button value="a">
+						    	None
+						    </button>
+						    <button value="b">
+						    	Grid
+						    </button>
+						    <button value="c">
+						    	Dots
+						    </button>
+						    <button value="d">
+						    	Lines
 						    </button>
 						</div>
 					</li>

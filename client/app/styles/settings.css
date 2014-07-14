@@ -83,7 +83,7 @@ input[type="text"].uilib-input {
   box-shadow: 0 0 8px #888888;
 }
 
-.bg-image .uilib-btn.btn-selected {
+.bg-image-container .uilib-btn.btn-selected {
   background: rgb(195,217,255); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(195,217,255,1) 0%, rgba(177,200,239,1) 41%, rgba(152,176,217,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(195,217,255,1)), color-stop(41%,rgba(177,200,239,1)), color-stop(100%,rgba(152,176,217,1))); /* Chrome,Safari4+ */
@@ -100,5 +100,13 @@ input[type="text"].uilib-input {
 }
 
 .bg-image {
-  margin-top: 5px;
+  /*margin-top: 5px;*/
+  width: 128px;
+  height: 128px;
+}
+
+.sample-model {
+  width: 100px;
+  vertical-align: middle;
+  border-radius: 8px;
 }
