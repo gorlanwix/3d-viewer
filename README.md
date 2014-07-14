@@ -12,7 +12,9 @@ Site owners can control:
 * Default camera settings
 
 Settings Panel Screenshots:
+
 ![alt tag](http://i.imgur.com/FNbHX8x.png)
+````````````````````````````````````````````````````````````````````````````````````````````````
 ![alt tag](http://i.imgur.com/iMSrvhb.png)
 ![alt tag](http://i.imgur.com/yJhHSkd.png)
 ![alt tag](http://i.imgur.com/h2rY5PQ.png)
