@@ -18,7 +18,9 @@ ___
 ![alt tag](http://i.imgur.com/iMSrvhb.png)
 ___
 ![alt tag](http://i.imgur.com/yJhHSkd.png)
+___
 ![alt tag](http://i.imgur.com/h2rY5PQ.png)
+___
 ![alt tag](http://i.imgur.com/w7zSTTM.png)
 
 The site visitors will be able to control the camera using their mouse:
