@@ -12,8 +12,8 @@ Site owners can control:
 * Default camera settings
 
 Settings Panel Screenshots:
-![alt tag](http://i.imgur.com/ShPJosB.png)
-![alt tag](http://i.imgur.com/hGesPpi.png)
+![alt tag](http://i.imgur.com/FNbHX8x.png)
+![alt tag](http://imgur.com/w7zSTTM,h2rY5PQ,yJhHSkd,iMSrvhb,FNbHX8x#3)
 
 The site visitors will be able to control the camera using their mouse:
 * Left click and hold to orbit/rotate camera
