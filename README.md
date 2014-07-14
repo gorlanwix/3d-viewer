@@ -14,8 +14,9 @@ Site owners can control:
 Settings Panel Screenshots:
 
 ![alt tag](http://i.imgur.com/FNbHX8x.png)
-_________________________________________
+___
 ![alt tag](http://i.imgur.com/iMSrvhb.png)
+___
 ![alt tag](http://i.imgur.com/yJhHSkd.png)
 ![alt tag](http://i.imgur.com/h2rY5PQ.png)
 ![alt tag](http://i.imgur.com/w7zSTTM.png)
