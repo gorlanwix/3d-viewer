@@ -14,7 +14,6 @@ Site owners can control:
 Settings Panel Screenshots:
 
 ![alt tag](http://i.imgur.com/FNbHX8x.png)
-````````````````````````````````````````````````````````````````````````````````````````````````
 ![alt tag](http://i.imgur.com/iMSrvhb.png)
 ![alt tag](http://i.imgur.com/yJhHSkd.png)
 ![alt tag](http://i.imgur.com/h2rY5PQ.png)
@@ -31,6 +30,7 @@ Site visitors will also be able to change camera mode:
 * Pan and cut at random positions/angles
 
 Target Widget Display & Controls (taken from SketchFab):
+
 ![alt tag](http://i.imgur.com/yI9MCKV.png)
 ![alt tag](http://i.imgur.com/loQI95O.png)
 ![alt tag](http://i.imgur.com/sG0VWRU.png)
