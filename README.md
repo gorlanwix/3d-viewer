@@ -8,7 +8,7 @@ Site owners can control:
 * Lighting
 * Shading
 * Colors
-* Background landscape, color, and opacity
+* Background color
 * Default camera settings
 
 Settings Panel Screenshots:
