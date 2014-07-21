@@ -2,18 +2,26 @@
 
 ### Front-end
 
-The 3D Viewer Wix app allows site creators to upload their 3D models to an environment configurable through the settings panel. Site visitors will be able to see the model on a canvas that the site owner can customize.
+The 3D Viewer Wix app allows site creators to upload their 3D models to an environment configurable through the settings panel. Site visitors will be able to see the model on a canvas that the site owner can customize. The application is not compatible with mobile devices.
 
 Site owners can control:
 * Lighting
 * Shading
 * Colors
-* Background landscape, color, and opacity
+* Background color
 * Default camera settings
 
 Settings Panel Screenshots:
-![alt tag](http://i.imgur.com/ShPJosB.png)
-![alt tag](http://i.imgur.com/hGesPpi.png)
+
+![alt tag](http://i.imgur.com/FNbHX8x.png)
+___
+![alt tag](http://i.imgur.com/iMSrvhb.png)
+___
+![alt tag](http://i.imgur.com/yJhHSkd.png)
+___
+![alt tag](http://i.imgur.com/h2rY5PQ.png)
+___
+![alt tag](http://i.imgur.com/w7zSTTM.png)
 
 The site visitors will be able to control the camera using their mouse:
 * Left click and hold to orbit/rotate camera
@@ -26,10 +34,11 @@ Site visitors will also be able to change camera mode:
 * Pan and cut at random positions/angles
 
 Target Widget Display & Controls (taken from SketchFab):
-![alt tag](http://i.imgur.com/8c7yoaz.png)
-![alt tag](http://i.imgur.com/KQCHgKJ.png)
-![alt tag](http://i.imgur.com/xLSJ5w7.png)
-![alt tag](http://i.imgur.com/eh0W2iO.png)
+
+![alt tag](http://i.imgur.com/yI9MCKV.png)
+![alt tag](http://i.imgur.com/loQI95O.png)
+![alt tag](http://i.imgur.com/sG0VWRU.png)
+![alt tag](http://i.imgur.com/cwtId1z.png)
 
 Site visitors will not be able to change the model, background, or settings. This way, site owners can display their original work as intended.
 
