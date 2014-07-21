@@ -13,16 +13,11 @@
 7. site visitor options: choose camera mode (rotation, speed, orbit etc)
 8. widget needs to be responsive. so site owners can control how big the canvas is and the model is still centered
 9. add connect account button, 3 sentence description. no upload file button
-10. change the accordion settings to some other name (model settings & environment settings)
-11. different compIds (components) corresponding to different canvases. same instanceId (user)
-12. control where the title is in the canvas (positioning). button group for aligning right/left
-13. model color should be optional. (on/off checkbox in case the model already comes with color)
-14. optional settings on/off checkbox with shading strength, shadow length, lighting strength
-15. put the upload file button above the optional title section
-16. look into media gallery file uploads and get the URL to the file 
-17. add option for no background. then background is just a plain 
-18. possibility to upload custom background model
-19. allow changing of model size/background size
-20. show different models (from etsy perhaps). more products that wix users might actually use
-21. make wireframes more accurate. photoshop remove options that won't be in the widget
-22. list mobile-compatibility in the github readme
+10. different compIds (components) corresponding to different canvases. same instanceId (user)
+11. control where the title is in the canvas (positioning). button group for aligning right/left
+12. optional settings on/off checkbox with shading strength, shadow length, lighting strength
+13. look into media gallery file uploads and get the URL to the file 
+14. add option for no background. then background is just a plain 
+15. possibility to upload custom background model
+16. allow changing of model size/background size
+17. show different models (from etsy perhaps). more products that wix users might actually use
