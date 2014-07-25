@@ -17,7 +17,6 @@
 11. control where the title is in the canvas (positioning). button group for aligning right/left
 12. optional settings on/off checkbox with shading strength, shadow length, lighting strength
 13. look into media gallery file uploads and get the URL to the file 
-14. add option for no background. then background is just a plain 
-15. possibility to upload custom background model
-16. allow changing of model size/background size
-17. show different models (from etsy perhaps). more products that wix users might actually use
+14. add option for no background. then background is just a plain \
+15. allow changing of model size/background size
+16. show different models (from etsy perhaps). more products that wix users might actually use

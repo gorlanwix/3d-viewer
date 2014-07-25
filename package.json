@@ -1,8 +1,8 @@
 {
-  "name": "send-files-server",
+  "name": "3d-viewer-server",
   "version": "0.0.0",
   "main": "server.js",
-  "repository": "https://github.com/donataswix/send-files-tpa",
+  "repository": "https://github.com/gorlanwix/3d-viewer",
   "license": "BSD-2-Clause",
   "scripts": {
     "start": "node server/server.js",

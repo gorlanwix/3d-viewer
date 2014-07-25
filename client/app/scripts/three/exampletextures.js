@@ -1,6 +1,8 @@
+'use strict';
+
 var container, stats;
 
-var camera, scene, renderer;
+var camera, controls, scene, renderer, particleSystem, smoke, smokeParticles, loadedObject;
 
 var mouseX = 0, mouseY = 0;
 
@@ -10,8 +12,8 @@ var windowHalfY = window.innerHeight / 2;
 var clock = new THREE.Clock;
 
 
-init();
-animate();
+// init();
+// animate();
 
 
 function init() {
@@ -36,6 +38,7 @@ function init() {
 
 	scene = new THREE.Scene();
 
+	//$scope.lightingColor = data.lightingColor;
 	var ambient = new THREE.AmbientLight( 0x444444 );
 	scene.add( ambient );
 
@@ -49,6 +52,23 @@ function init() {
 	scene.add(pointLight);
 
 	// background / effects / particles
+
+	// particle: smoke
+
+	smokeParticles = new THREE.Geometry;
+	for (var i = 0; i < 1000; i++) {
+		var particle = new THREE.Vector3(Math.random() * 150 - 75, Math.random() * 230, Math.random() * 50 - 25);
+		smokeParticles.vertices.push(particle);
+	}
+
+	var smokeTexture = THREE.ImageUtils.loadTexture('../models/textures/smoke.png');
+	var smokeMaterial = new THREE.ParticleBasicMaterial({ map: smokeTexture, transparent: true, blending: THREE.AdditiveBlending, size: 50, color: 0x111111 });
+
+	smoke = new THREE.ParticleSystem(smokeParticles, smokeMaterial);
+	smoke.sortParticles = true;
+	smoke.position.y = -100;
+
+	scene.add(smoke);
 
 	// particles: snowflake
 
@@ -66,26 +86,9 @@ function init() {
 
 	var particleMaterial = new THREE.ParticleBasicMaterial({ color: 0xFFFFFF, map: particleTexture, transparent: true, size: 5, blending: THREE.AdditiveBlending });
 
-	var particleSystem = new THREE.ParticleSystem(particles, particleMaterial);
+	particleSystem = new THREE.ParticleSystem(particles, particleMaterial);
 
 	scene.add(particleSystem);
-
-	// particle: smoke
-
-	var smokeParticles = new THREE.Geometry;
-	for (var i = 0; i < 1000; i++) {
-		var particle = new THREE.Vector3(Math.random() * 150 - 75, Math.random() * 230, Math.random() * 50 - 25);
-		smokeParticles.vertices.push(particle);
-	}
-
-	var smokeTexture = THREE.ImageUtils.loadTexture('../models/textures/smoke.png');
-	var smokeMaterial = new THREE.ParticleBasicMaterial({ map: smokeTexture, transparent: true, blending: THREE.AdditiveBlending, size: 50, color: 0x111111 });
-
-	var smoke = new THREE.ParticleSystem(smokeParticles, smokeMaterial);
-	smoke.sortParticles = true;
-	smoke.position.y = -100;
-
-	scene.add(smoke);
 
 	// model
 
@@ -94,6 +97,7 @@ function init() {
 	// loader.load( '../models/zero/zero.obj', '../models/zero/zero.mtl', function ( object ) {
 
 		object.position.y = - 80;
+		loadedObject = object;
 		scene.add( object );
 
 	} );
@@ -139,11 +143,24 @@ function animate() {
 	requestAnimationFrame( animate );
 	// render();
 
-	// console.log(clock.getDelta());
 	var delta = clock.getDelta();
 	particleSystem.rotation.y += delta;
+	loadedObject.rotation.y -= delta;
+	smoke.rotation.y -= delta;
 
 	controls.update();
+
+	var particleCount = smokeParticles.vertices.length;
+	while (particleCount--) {
+		var particle = smokeParticles.vertices[particleCount];
+		particle.y += delta * 50;
+		if (particle.y >= 230) {
+			particle.y = Math.random() * 16;
+			particle.x = Math.random() * 150 - 75;
+			particle.z = Math.random() * 50 - 25;
+		}
+	}
+	smokeParticles.__dirtyVertices = true;
 
 	// camera.lookAt( scene.position );
 
@@ -161,3 +178,6 @@ function animate() {
 // 	renderer.render( scene, camera );
 
 // }
+
+init();
+animate();

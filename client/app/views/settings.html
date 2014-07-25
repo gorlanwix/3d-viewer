@@ -60,6 +60,9 @@
 		        		<div  wix-model="lightingStrength" wix-ctrl="Slider" wix-options="{ maxValue:100 }"></div>
 		        		<span class="uilib-text slider-post-label">Bright</span>
 		        	</li>
+		        	<li wix-label="Lighting Color">
+		        		<div wix-param="lightingColor" wix-ctrl="ColorPicker" wix-options="{startWithColor: 'color-1'}"></div>
+		        	</li>
 		        	<li wix-label="Lighting Type">
 		        		<div wix-model="lightingType" wix-ctrl="ButtonGroup">
 						    <button value="0" ng-click="disableLightingOptions()">None</button>
@@ -88,7 +91,7 @@
 						</div>
 		        	</li>
 		        	<li wix-label="Background Color">
-		        		<div wix-param="bgColor" wix-ctrl="ColorPicker" wix-options="{startWithColor: 'color-3'}"></div>
+		        		<div wix-param="bgColor" wix-ctrl="ColorPicker" wix-options="{startWithColor: 'color-9'}"></div>
 		        	</li>
 					<!-- <li style="margin-bottom: 15px;" wix-label="Background Landscape">
 						<div class="bg-image-container" wix-model="size" wix-ctrl="ButtonGroup">

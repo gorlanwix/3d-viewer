@@ -27,115 +27,13 @@
 
 	<body>
 		<div id="info">
-		<a href="http://threejs.org" target="_blank">three.js</a> - JSONLoader test
+		<a href="http://threejs.org" target="_blank">three.js</a> - JSONLoader
 		</div>
 
 		<script src="../libraries/three.min.js"></script>
 		<script src="../libraries/Detector.js"></script>
 
-		<script>
-
-			var container, stats;
-
-			var camera, scene, renderer, loadedObject, animation;
-
-			var skinnedMesh, pivot, item;
-
-			var mouseX = 0, mouseY = 0;
-
-			var windowHalfX = window.innerWidth / 2;
-			var windowHalfY = window.innerHeight / 2;
-
-			var clock = new THREE.Clock;
-
-			function init() {
-
-				container = document.createElement('div');
-				document.body.appendChild(container);
-				camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
-				camera.position.z = 500;
-
-				scene = new THREE.Scene();
-
-				//add ambient light and directional light at half intensity
-
-				var ambient = new THREE.AmbientLight(0xD4D4D4);
-				scene.add(ambient);
-
-				var directionalLight = new THREE.DirectionalLight(0xFFFFFF, 0.5);
-				directionalLight.position.set(0,1,0);
-				scene.add(directionalLight);
-
-				//load the model
-
-				var cubeGeometry = new THREE.BoxGeometry(100, 100, 100);
-				var cubeTexture = THREE.ImageUtils.loadTexture('../models/textures/texture.png');
-				var materials = [];
-				materials.push(new THREE.MeshLambertMaterial({ map: cubeTexture, color: 0xFF0000 }));
-				materials.push(new THREE.MeshLambertMaterial({ map: cubeTexture, color: 0xFFFF00 }));
-				materials.push(new THREE.MeshLambertMaterial({ map: cubeTexture, color: 0xFFFFFF }));
-				materials.push(new THREE.MeshLambertMaterial({ map: cubeTexture, color: 0x00FFFF }));
-				materials.push(new THREE.MeshLambertMaterial({ map: cubeTexture, color: 0x0000FF }));
-				materials.push(new THREE.MeshLambertMaterial({ map: cubeTexture, color: 0xFF00FF }));
-				var cubeMaterial = new THREE.MeshFaceMaterial(materials);
-				var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-				scene.add(cube);
-
-				var loader = new THREE.JSONLoader();
-				loader.load('../models/flamingo.js', function (geometry, materials) {
-					skinnedMesh = new THREE.SkinnedMesh (geometry, new THREE.MeshFaceMaterial(materials));
-					skinnedMesh.position.y = 50;
-					skinnedMesh.scale.set(15, 15, 15);
-					scene.add(skinnedMesh);
-
-					item = new THREE.Mesh(new THREE.CubeGeometry(100, 10, 10), new THREE.MeshBasicMaterial({ color: 0xFF0000 }));
-					item.position.x = 50;
-					pivot = new THREE.Object3D();
-					pivot.scale.set(.15, .15, .15);
-					pivot.add(item);
-					pivot.useQuaternion = true;
-					skinnedMesh.add(pivot);
-
-					animate(skinnedMesh);
-				});
-
-				renderer = new THREE.WebGLRenderer();
-				renderer.setSize(window.innerWidth, window.innerHeight);
-				container.appendChild(renderer.domElement);
-
-				window.addEventListener('resize', onWindowResize, false);
-			}
-
-			function onWindowResize() {
-
-				windowHalfX = window.innerWidth / 2;
-				windowHalfY = window.innerHeight / 2;
-
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
-
-				renderer.setSize(window.innerWidth, window.innerHeight);
-
-			}
-
-			function animate (skinnedMesh) {
-				var materials = skinnedMesh.material.materials;
-
-				for (var k in materials) {
-					materials[k].skinning = true;
-				}
-
-				THREE.AnimationHandler.add(skinnedMesh.geometry.animation);
-				animation = new THREE.Animation(skinnedMesh, "AnimationName", THREE.AnimationHandler.CATMULLROM);
-				animation.play(false, 0);
-
-			}
-
-			init();
-
-
-
-		</script>
+		<script src="../scripts/three/jsmodelview.js"></script>
 
 	</body>
 </html>
