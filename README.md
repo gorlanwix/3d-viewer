@@ -1,6 +1,6 @@
 ## 3D Viewer
 
-If running locally, open the terminal and run "grunt serve" in client directory or "npm run develop-client" in root directory. Then run "npm test" in server directory in another tab. The minified production application currently does not work due to the Grunt issue https://github.com/yeoman/grunt-usemin/issues/266 . Once this issue is resolved, you should be able to type "grunt build" in client directory to get the production ready app.
+If running locally, open the terminal and run "grunt serve" in client directory or "npm run develop-client" in root directory. Then run "npm test" in server directory in another tab. The minified production application currently does not work due to the Grunt issue https://github.com/yeoman/grunt-usemin/issues/266 . Once this issue is resolved, you should be able to type "grunt build" in client directory to get the production ready app. After which, you can type "npm start" in the server directory in place of "npm test" to test the minified production app locally.
 
 ### Front-end
 
