@@ -171,12 +171,24 @@ module.exports = function (grunt) {
       }
     },
 
+    // this may be unneeded (rev might already take care of this)
+    // filerev: { 
+    //   options: {
+    //     encoding: 'utf8',
+    //     algorithm: 'md5',
+    //     length: 8
+    //   },
+    //   images: {
+    //     src: '<%= yeoman.app %>/images/*.{jpg,jpeg,gif,png}'
+    //   }
+    // },
+
 
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: ['<%= yeoman.app %>/index.html', '<%= yeoman.app %>/settings.html'],
+      html: ['<%= yeoman.app %>/index.html', '<%= yeoman.app %>/settings.html', '<%= yeoman.app %>/views/*.html'],
       options: {
         dest: '<%= yeoman.dist %>'
       }
@@ -252,7 +264,6 @@ module.exports = function (grunt) {
               '.htaccess',
               'bower_components/**/*',
               'images/{,*/}*.{webp,ico,png,jpg,jpeg,gif,svg}',
-              'libraries/*',
               'fonts/*',
               'translations/*'
             ]

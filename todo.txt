@@ -20,3 +20,7 @@
 14. add option for no background. then background is just a plain \
 15. allow changing of model size/background size
 16. show different models (from etsy perhaps). more products that wix users might actually use
+17. add effects options (ideas: sparkle particles, smoke, fire, etc)
+18. add customizability to effects (rotating, rising, dispersing)
+19. fix gruntfile not copying some scripts to dist and to the wrong directory (a bug within grunt. cannot fix without troublesome workarounds right now)
+20. fix gruntfile not prefixing the minified JS and CSS files with UTF 8 encoding 

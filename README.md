@@ -1,5 +1,7 @@
 ## 3D Viewer
 
+If running locally, open the terminal and run "grunt serve" in client directory or "npm run develop-client" in root directory. Then run "npm test" in server directory in another tab. The minified production application currently does not work due to the Grunt issue https://github.com/yeoman/grunt-usemin/issues/266 . Once this issue is resolved, you should be able to type "grunt build" in client directory to get the production ready app.
+
 ### Front-end
 
 The 3D Viewer Wix app allows site creators to upload their 3D models to an environment configurable through the settings panel. Site visitors will be able to see the model on a canvas that the site owner can customize. The application is not compatible with mobile devices.
