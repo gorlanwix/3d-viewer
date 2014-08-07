@@ -24,3 +24,6 @@
 18. add customizability to effects (rotating, rising, dispersing)
 19. fix gruntfile not copying some scripts to dist and to the wrong directory (a bug within grunt. cannot fix without troublesome workarounds right now)
 20. fix gruntfile not prefixing the minified JS and CSS files with UTF 8 encoding 
+21. use ng-repeat to allow for multiple models (pending)
+22. background color of canvas not compatible with input type text/clicking. find fix/work around
+23. 

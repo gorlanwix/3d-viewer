@@ -47,3 +47,5 @@ Site visitors will not be able to change the model, background, or settings. Thi
 ### Back-end
 
 The back end is written in Node.js and the database uses MongoDB/Mongoose. The models themselves are saved on Amazon S3 web services.
+
+To start up MongoDB, run "mongod -dbpath data/db/ --logpath data/logs/mongodb.log --logappend" in the terminal while in the server directory. Logs will be appended in server/data/logs.

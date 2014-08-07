@@ -23,10 +23,10 @@ var cube = new THREE.Mesh(BoxGeometry, cubeMaterial);
 //cube.rotation.y = Math.PI * 45 / 180;
 scene.add(cube);
 
-var loader = new THREE.JSONLoader();
+var loader = new THREE.OBJLoader();
 var animation;
 var skinnedMesh, pivot, item;
-loader.load('../models/bird.js', function (geometry, materials) {
+loader.load('../models/batman/Batman.obj', function (geometry, materials) {
 	skinnedMesh = new THREE.SkinnedMesh(geometry, new THREE.MeshFaceMaterial(materials));
 	skinnedMesh.position.y = 50;
 	skinnedMesh.scale.set(15, 15, 15);

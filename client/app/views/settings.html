@@ -6,7 +6,7 @@
 	<header class="box description-box">
 		<img class="logo" width="86" src="images/wix_icon.png">
 		<div class="notloggedin-container" ng-hide="provider">
-			<p class="description">The 3D Viewer Application allows you to upload and display your 3D models and configure display options. Visitors of your site will be able to see your work at any camera angle they like.</p>
+			<p class="description">The 3D Viewer Application allows you to upload and display your 3D models and configure display options. Visitors of your site will be able to see your work at any camera angle they like. Accepted formats: .obj for models, .mtl for materials, .png for textures.</p>
 	    </div>
 	</header>
 	<div wix-ctrl="Accordion">
@@ -15,14 +15,19 @@
 	        <div class="acc-content">
 	        	<ul class="list">
 	        		<li wix-label="Model File">
-	        			<div ng-hide="modelUploaded">
+	        			<!-- <div ng-hide="modelUploaded">
 				        	<span class="uilib-text">Supported formats: (.cad, .swf, .svg)</span> 
 				        	<button>Upload File</button>
-				        </div>
-			        	<div ng-show="modelUploaded">
+				        </div> -->
+				        <form action="/server/models" method="post" enctype="multipart/form-data">
+							<p>Please upload your file (.obj & .mtl files accepted):</p><br>
+							<input type="file" name="datafile">
+							<div><input type="submit" value="Upload"></div>
+						</form>
+			        	<!-- <div ng-show="modelUploaded">
 			        		<img class="sample-model" src="images/Headphones_001.jpg"/>
-			        		<button>Remove</button>
-			        	</div>
+			        		<button>Remove</button> 
+			        	</div> -->
 			        </li>
 	        		<li wix-label="Title (Optional)">
 			        	<div wix-model="title" wix-ctrl="Input" wix-options="{placeholder: 'Mona Lisa Sculpture'}"></div>
