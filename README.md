@@ -27,13 +27,8 @@ ___
 
 The site visitors will be able to control the camera using their mouse:
 * Left click and hold to orbit/rotate camera
-* Middle click and hold to translate camera
+* Right click and hold to translate camera
 * Middle scroll wheel to zoom in/out
-
-Site visitors will also be able to change camera mode:
-* Automatic orbit
-* Stationary
-* Pan and cut at random positions/angles
 
 Target Widget Display & Controls (taken from SketchFab):
 
@@ -42,7 +37,7 @@ Target Widget Display & Controls (taken from SketchFab):
 ![alt tag](http://i.imgur.com/sG0VWRU.png)
 ![alt tag](http://i.imgur.com/cwtId1z.png)
 
-Site visitors will not be able to change the model, background, or settings. This way, site owners can display their original work as intended.
+Site visitors will not be able to change the model, background, or settings, but they can change their view/perspective. This way, site owners can display their original work as intended. 
 
 ### Back-end
 

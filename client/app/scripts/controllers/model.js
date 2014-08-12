@@ -1,10 +1,13 @@
 'use strict';
 
-console.log('model controller loaded');
-
 angular.module('3dViewer')
-	.controller('ModelCtrl', function ($scope) {
+	.controller('ModelCtrl', function ($scope, $wix, $http, id) {
     console.log('controller opened');
+
+    var compId = id.getOrigCompId() || id.getCompId();
+    var instance = id.getInstance();
+
+    var identification = {instance: instance, compId: compId};
 
     $scope.modelRotationSpeed = modelRotationSpeed;
 
@@ -18,6 +21,12 @@ angular.module('3dViewer')
     $scope.backgroundColor = 0x000000;
     renderer.setClearColor( $scope.backgroundColor, 0);
     console.log($scope.backgroundColor);
+
+    // $wix.addEventListener($wix.Events.SETTINGS_UPDATED, function(message) {
+    //   $scope.settings = message;
+    //   $scope.$apply();
+    //   console.log('settings changed event listened', $scope.settings)
+    // });
 
     $scope.toggleModelRotation = function () {
       modelRotationOn = !modelRotationOn;
@@ -60,8 +69,6 @@ angular.module('3dViewer')
       $scope.modelRotationSpeed = modelRotationSpeed;
     }
 
-    $scope.toggleSmoke
-
     $scope.increaseSmokeRotationSpeed = function () {
       smokeRotationSpeed += 0.5;
       $scope.smokeRotationSpeed = smokeRotationSpeed;
@@ -91,5 +98,35 @@ angular.module('3dViewer')
       particlesRotationSpeed -= 0.5;
       $scope.particlesRotationSpeed = particlesRotationSpeed;
     }
+
+    // Testing save on back end & database
+    var postUser = function () {
+      console.log('start post');
+      $http.post('/save', identification)
+        .success(function (data, status, headers, config) {
+          console.log(data, status, headers, config);
+        })
+        .error(function (data, status, headers, config) {
+          console.log("Error with POST user: ", data, status, headers, config);
+        });
+      console.log('end post');
+    }
+
+    // postUser();
+
+    var putUser = function () {
+      console.log('start put');
+      $http.put('/save', identification)
+        .success(function (data, status, headers, config) {
+          console.log(data, status, headers, config);
+        })
+        .error(function (data, status, headers, config) {
+          console.log("Error with PUT user: ", data, status, headers, config);
+        });
+      console.log('end put');
+    }
+
+    putUser();
+
 
   });
