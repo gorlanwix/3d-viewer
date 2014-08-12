@@ -17,7 +17,7 @@
 20. fix gruntfile not prefixing the minified JS and CSS files with UTF 8 encoding 
 21. use ng-repeat to allow for multiple models (optional)
 22. background color of canvas not compatible with input type text/clicking. find fix/work around
-23. upon initialization of the widget, make a post request to save user IDs
+23. upon initialization of the widget, make a post request to save user IDs. consider making GET request first to check if identification already exists
 24. upon model upload, make a put request to save model path
 25. when model is uploaded, take a snapshot of the model so user can preview what model was uploaded
 26. saving/updating users: GET request on the user's identification, if success (identification exists, save the identification). if error or does not exist, save/post the identification. this logic will go in the front end

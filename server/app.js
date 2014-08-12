@@ -191,7 +191,8 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 
 // Lets multer know where uploaded files are located
-var MODEL_DIRECTORY = './uploads/';
+// var MODEL_DIRECTORY = './uploads/';
+var MODEL_DIRECTORY = '../models/';
 app.use(multer({ dest: MODEL_DIRECTORY}));
 
 app.post('/server/models', function (req, res) {
@@ -268,7 +269,7 @@ test.testFindAll();
 // Development Settings
 if (app.get('env') === 'development') {
     app.use(express.static(path.join(__dirname, '../client/.tmp')));
-    app.use(express.static(path.join(__dirname, '../client/app/')));
+    app.use(express.static(path.join(__dirname, '../client/app')));
 
     // Development error handling
     app.use(function (err, req, res, next) {

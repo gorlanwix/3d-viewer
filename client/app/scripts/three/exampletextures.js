@@ -120,8 +120,14 @@ function init() {
 	// var modelPath = '../models/Paris/Paris2010_0.obj';
 	// var mtlPath = '../models/Paris/Paris2010.mtl';
 
-	var modelPath = '../models/batman/Batman.obj';
-	var mtlPath = '../models/batman/Batman.mtl';
+	// var modelPath = '../models/batman/Batman.obj';
+	// var mtlPath = '../models/batman/Batman.mtl';
+
+	// var modelPath = '../../../../models/batman/Batman.obj';
+	// var mtlPath = '../../../../models/batman/Batman.mtl';
+
+	var modelPath = './testinvalid/path.obj';
+	var mtlPath = './testinvalid/path.mtl';
 
 	var loader = new THREE.OBJMTLLoader();
 	// var loader = new THREE.OBJLoader();
