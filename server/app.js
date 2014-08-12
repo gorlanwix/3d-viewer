@@ -232,9 +232,12 @@ app.put('/save', function (req, res) {
     var newinstance = 'testinstance-PUT';
     var newcompId = 'testcompId-PUT';
 
+    var actualinstance = req.body.instance;
+    var actualcompId = req.body.compId;
+
     console.log('PUT request info: ', req.body); // currently returns { compId: [UNKNOWN]} if not used in the Wix editor
 
-    db.users.update({ instance: oldinstance, compId: oldcompId }, {$set: { instance: newinstance, compId: newcompId }}, function (err, saved) {
+    db.users.update({ instance: oldinstance, compId: oldcompId }, {$set: { instance: actualinstance, compId: actualcompId }}, function (err, saved) {
         if (err || !saved) {
             res.json({'Error saving new settings on old user: ': err});
         } else {

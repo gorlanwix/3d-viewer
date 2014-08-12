@@ -1,6 +1,6 @@
 ## 3D Viewer
 
-If running locally, open the terminal and run "grunt serve" in client directory or "npm run develop-client" in root directory. Then run "npm test" in server directory in another tab. The minified production application currently does not work due to the Grunt issue https://github.com/yeoman/grunt-usemin/issues/266 . Once this issue is resolved, you should be able to type "grunt build" in client directory to get the production ready app. After which, you can type "npm start" in the server directory in place of "npm test" to test the minified production app locally.
+If running locally, open the terminal and run "grunt serve" in client directory or "npm run develop-client" in root directory. Then run "npm test" in server directory in another tab, and also run "mongod" in server directory in a third tab. The minified production application currently does not work due to the Grunt issue https://github.com/yeoman/grunt-usemin/issues/266 . Once this issue is resolved, you should be able to type "grunt build" in client directory to get the production ready app. After which, you can type "npm start" in the server directory in place of "npm test" to test the minified production app locally.
 
 ### Front-end
 
@@ -44,3 +44,7 @@ Site visitors will not be able to change the model, background, or settings, but
 The back end is written in Node.js and the database uses MongoDB/Mongoose. The models themselves are saved on Amazon S3 web services.
 
 To start up MongoDB, run "mongod -dbpath data/db/ --logpath data/logs/mongodb.log --logappend" in the terminal while in the server directory. Logs will be appended in server/data/logs.
+
+### Development notes
+
+The 3D environment completely works in localhost:9000 (when running "grunt serve" in /client or "npm run develop-client" in root). But does not work in localhost:3000 (when running "npm test" in /server). The backend saves the user identification (instance and compId) to MongoDB when the widget is opened in the Wix editor.

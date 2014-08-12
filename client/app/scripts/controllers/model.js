@@ -118,7 +118,7 @@ angular.module('3dViewer')
       console.log('start put');
       $http.put('/save', identification)
         .success(function (data, status, headers, config) {
-          console.log(data, status, headers, config);
+          // console.log(data, status, headers, config);
         })
         .error(function (data, status, headers, config) {
           console.log("Error with PUT user: ", data, status, headers, config);
@@ -126,7 +126,7 @@ angular.module('3dViewer')
       console.log('end put');
     }
 
-    putUser();
+    // putUser();
 
 
   });
